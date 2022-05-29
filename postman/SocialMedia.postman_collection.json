@@ -1,0 +1,1327 @@
+{
+	"info": {
+		"_postman_id": "a5d22d7a-0448-48b1-9967-f49ee9795380",
+		"name": "SocialMedia",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19702200"
+	},
+	"item": [
+		{
+			"name": "user1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var response = pm.response.json();",
+							"pm.collectionVariables.set(\"user1\", response.id);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"ali@ali.com\",\n  \"password\": \"ali\",\n  \"userName\": \"ali\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "wrongEmailForUser",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"aliaa\",\n  \"password\": \"ali\",\n  \"userName\": \"ali\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var response = pm.response.json();",
+							"pm.collectionVariables.set(\"user2\", response.id);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"ahmet@ahmet.com\",\n  \"password\": \"ahmet\",\n  \"userName\": \"ahmet\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var response = pm.response.json();",
+							"pm.collectionVariables.set(\"user3\", response.id);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"aylin@aylin.com\",\n  \"password\": \"aylin\",\n  \"userName\": \"aylin\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user4",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var response = pm.response.json();",
+							"pm.collectionVariables.set(\"user4\", response.id);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"ayse@ayse.com\",\n  \"password\": \"ayse\",\n  \"userName\": \"ayse\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateUser1",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"bio\": \"ali bir muhendistir.\",\n  \"email\": \"ali@ali.com\",\n  \"fullName\": \"Ali Aydın\",\n  \"profilePicture\": \"resim.png\",\n  \"userName\": \"ali\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/updateUserInfo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"updateUserInfo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All User",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/allUsers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"allUsers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post1Foruser1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var response = pm.response.json();",
+							"pm.collectionVariables.set(\"post1\", response.id);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"description\": \"alinin ilk postu\",\n  \"image\": \"image.png\",\n  \"userID\": {{user1}}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/sendPost",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sendPost"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post5Foruser1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var response = pm.response.json();",
+							"pm.collectionVariables.set(\"post5\", response.id);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"description\": \"alinin ikinci postu\",\n  \"image\": \"image.png\",\n  \"userID\": {{user1}}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/sendPost",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sendPost"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post2ForUser2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var response = pm.response.json();",
+							"pm.collectionVariables.set(\"post2\", response.id);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"description\": \"ahmetin ilk postu\",\n  \"image\": \"ahmet.png\",\n  \"userID\": {{user2}}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/sendPost",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sendPost"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post6ForUser2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var response = pm.response.json();",
+							"pm.collectionVariables.set(\"post6\", response.id);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"description\": \"ahmetin ikinci postu\",\n  \"image\": \"ahmetIkinci.png\",\n  \"userID\": {{user2}}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/sendPost",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sendPost"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post7ForUser3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var response = pm.response.json();",
+							"pm.collectionVariables.set(\"post7\", response.id);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"description\": \"aylinin ikinci postu\",\n  \"image\": \"aylinikinci.png\",\n  \"userID\": {{user3}}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/sendPost",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sendPost"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post3ForUser3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var response = pm.response.json();",
+							"pm.collectionVariables.set(\"post3\", response.id);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"description\": \"aylinin ilk postu\",\n  \"image\": \"aylin.png\",\n  \"userID\": {{user3}}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/sendPost",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sendPost"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post8ForUser4",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var response = pm.response.json();",
+							"pm.collectionVariables.set(\"post8\", response.id);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"description\": \"aysenin ikinci postu\",\n  \"image\": \"ayseikinci.png\",\n  \"userID\": {{user4}}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/sendPost",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sendPost"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post4ForUser4",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var response = pm.response.json();",
+							"pm.collectionVariables.set(\"post4\", response.id);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"description\": \"aysenin ilk postu\",\n  \"image\": \"ayseilk.png\",\n  \"userID\": {{user4}}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/sendPost",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sendPost"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deletePost8",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"postId\": {{post8}}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/deletePost",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"deletePost"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "all Post",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/allPost",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"allPost"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "like1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var response = pm.response.json();",
+							"pm.collectionVariables.set(\"like1\", response.id);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"postID\": {{post1}},\n  \"userID\": {{user3}}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/like",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"like"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "like2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var response = pm.response.json();",
+							"pm.collectionVariables.set(\"like2\", response.id);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"postID\": {{post1}},\n  \"userID\": {{user4}}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/like",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"like"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "like3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var response = pm.response.json();",
+							"pm.collectionVariables.set(\"like3\", response.id);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"postID\": {{post2}},\n  \"userID\": {{user4}}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/like",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"like"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "like4",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var response = pm.response.json();",
+							"pm.collectionVariables.set(\"like4\", response.id);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"postID\": {{post2}},\n  \"userID\": {{user1}}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/like",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"like"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "unlike",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"likeId\": {{like4}}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/unLike",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"unLike"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "like5",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var response = pm.response.json();",
+							"pm.collectionVariables.set(\"like5\", response.id);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"postID\": {{post3}},\n  \"userID\": {{user1}}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/like",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"like"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "all Like",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/allLike",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"allLike"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "follow1user1to2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var response = pm.response.json();",
+							"pm.collectionVariables.set(\"follow1\", response.id);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"followerID\": {{user1}},\n  \"followingID\": {{user2}}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/follow",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"follow"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "follow2user1to3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var response = pm.response.json();",
+							"pm.collectionVariables.set(\"follow2\", response.id);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"followerID\": {{user1}},\n  \"followingID\": {{user3}}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/follow",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"follow"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "follow2user2to1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var response = pm.response.json();",
+							"pm.collectionVariables.set(\"follow3\", response.id);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"followerID\": {{user2}},\n  \"followingID\": {{user1}}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/follow",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"follow"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "follow2user2to3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var response = pm.response.json();",
+							"pm.collectionVariables.set(\"follow4\", response.id);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"followerID\": {{user2}},\n  \"followingID\": {{user3}}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/follow",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"follow"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "unFollow1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"followId\": {{follow1}}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/unFollow",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"unFollow"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "all Follow",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/allFollow",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"allFollow"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getPosts ( For algrthm  1 )",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"postsID\": [\n    {{post1}},\n    {{post5}},\n    {{post2}},\n    {{post3}}\n  ],\n  \"userID\": {{user1}}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/getPosts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"getPosts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post1Foruser1 Copy",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var response = pm.response.json();",
+							"pm.collectionVariables.set(\"post1\", response.id);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"description\": \"alinin ilk postu\",\n  \"image\": \"image.png\",\n  \"userID\": {{user1}}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/sendPost",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sendPost"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "MergePosts ( For Algrthm 2 )",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"postsID\": [\n    [\n      {\n        \"createdAt\": 1914144003,\n        \"description\": \"post1\",\n        \"id\": {{post1}},\n        \"image\": \"string\"\n      },      \n      {\n        \"createdAt\": 1914144003,\n        \"description\": \"post2\",\n        \"id\": {{post2}},\n        \"image\": \"string\"\n      },      \n      {\n        \"createdAt\": 1914144002,\n        \"description\": \"post3\",\n        \"id\": {{post3}},\n        \"image\": \"string\"\n      }\n    ],\n        [\n      {\n        \"createdAt\": 1914144005,\n        \"description\": \"post4\",\n        \"id\": {{post4}},\n        \"image\": \"string\"\n      },      \n      {\n        \"createdAt\": 1914144006,\n        \"description\": \"post5\",\n        \"id\": {{post5}},\n        \"image\": \"string\"\n      },      \n      {\n        \"createdAt\": 1914144006,\n        \"description\": \"post6\",\n        \"id\": {{post6}},\n        \"image\": \"string\"\n      }\n    ]\n  ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/mergePosts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"mergePosts"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "user1",
+			"value": ""
+		},
+		{
+			"key": "user2",
+			"value": ""
+		},
+		{
+			"key": "user3",
+			"value": ""
+		},
+		{
+			"key": "user4",
+			"value": ""
+		},
+		{
+			"key": "post1",
+			"value": ""
+		},
+		{
+			"key": "post2",
+			"value": ""
+		},
+		{
+			"key": "post3",
+			"value": ""
+		},
+		{
+			"key": "post4",
+			"value": ""
+		},
+		{
+			"key": "post5",
+			"value": ""
+		},
+		{
+			"key": "post6",
+			"value": ""
+		},
+		{
+			"key": "post7",
+			"value": ""
+		},
+		{
+			"key": "post8",
+			"value": ""
+		},
+		{
+			"key": "like1",
+			"value": ""
+		},
+		{
+			"key": "like3",
+			"value": ""
+		},
+		{
+			"key": "like4",
+			"value": ""
+		},
+		{
+			"key": "like2",
+			"value": ""
+		},
+		{
+			"key": "follow1",
+			"value": ""
+		},
+		{
+			"key": "follow3",
+			"value": ""
+		},
+		{
+			"key": "follow4",
+			"value": ""
+		},
+		{
+			"key": "follow2",
+			"value": ""
+		},
+		{
+			"key": "like5",
+			"value": ""
+		}
+	]
+}
